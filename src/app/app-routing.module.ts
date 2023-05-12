@@ -24,7 +24,7 @@ const routes: Routes = [
   {
     path: 'structural-directives/unless',
     loadChildren: () =>
-      import('./structural-directives/unless.module').then(
+      import('./structural-directives/unless/unless.module').then(
         (m) => m.UnlessModule
       ),
   },
