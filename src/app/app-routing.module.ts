@@ -42,6 +42,11 @@ const routes: Routes = [
         (m) => m.HeaderModule
       ),
   },
+  {
+    path: 'structural-directives/for',
+    loadChildren: () =>
+      import('./structural-directives/for/for.module').then((m) => m.ForModule),
+  },
 ];
 
 @NgModule({
