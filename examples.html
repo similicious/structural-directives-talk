@@ -1,0 +1,20 @@
+<section *ngIf="condition">Maybe rendered</section>
+
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
+
+<main [ngSwitch]="fruit">
+  <section *ngSwitchCase="'apple'">🍎</section>
+  <section *ngSwitchCase="'banana'">🍌</section>
+  <section *ngSwitchDefault>🤷</section>
+</main>
+
+<section [ngClass]="{'classA': condition, 'classB': !condition}"></section>
+
+<a [routerLink]="['/', 'route', 'to', 'navigate', 'to']">Go there</a>
+<!-- ... -->
+<router-outlet></router-outlet>
+
+<p>Favourite fruit {{ fruit }}</p>
+<input type="text" [(ngModel)]="fruit" />
