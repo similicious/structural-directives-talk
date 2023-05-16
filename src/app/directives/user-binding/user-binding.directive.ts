@@ -2,7 +2,7 @@ import { Directive, OnInit } from '@angular/core';
 import { UserService } from './user.service';
 import { DemoTableComponent } from './demo-table.component';
 @Directive({
-  selector: '[appUserBinding]',
+  selector: 'app-demo-table[appUserBinding]',
 })
 export class UserBindingDirective implements OnInit {
   constructor(
