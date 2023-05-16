@@ -4,4 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-for-demo',
   templateUrl: './for-demo.component.html',
 })
-export class ForDemoComponent {}
+export class ForDemoComponent {
+  users = [
+    { firstName: 'Max', lastName: 'Musermann' },
+    { firstName: 'Jane', lastName: 'Doe' },
+  ];
+}
