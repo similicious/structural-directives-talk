@@ -28,6 +28,13 @@ const routes: Routes = [
         (m) => m.UnlessModule
       ),
   },
+  {
+    path: 'structural-directives/assign',
+    loadChildren: () =>
+      import('./structural-directives/assign/assign.module').then(
+        (m) => m.AssignModule
+      ),
+  },
 ];
 
 @NgModule({

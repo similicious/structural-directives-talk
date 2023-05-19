@@ -1,0 +1,12 @@
+section {
+  border: 1px solid grey;
+  margin-bottom: 1rem;
+}
+
+li {
+  cursor: pointer;
+
+  &:hover {
+    background-color: grey;
+  }
+}
