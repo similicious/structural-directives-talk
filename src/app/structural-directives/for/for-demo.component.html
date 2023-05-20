@@ -1,7 +1,20 @@
 <h1 class="is-size-3">ForDirective</h1>
 
 <h2 class="is-size-4">appFor</h2>
-<ul></ul>
+<ul>
+  <li
+    *appFor="
+      let user of users;
+      let index = index;
+      let isFirstItem = first;
+      last as isLastItem
+    "
+  >
+    {{ index + 1 }} {{ user.firstName }} {{ user.lastName }}
+    <ng-container *ngIf="isFirstItem">first</ng-container>
+    <ng-container *ngIf="isLastItem">last</ng-container>
+  </li>
+</ul>
 
 <br />
 
