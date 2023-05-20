@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AssignDemoComponent {
   users = [
-    { firstName: 'Max', lastName: 'Musermann' },
+    { firstName: 'Max', lastName: 'Mustermann' },
     { firstName: 'Jane', lastName: 'Doe' },
     { firstName: 'Alex', lastName: 'Kaufmann' },
     { firstName: 'Theodor', lastName: 'Schmidt' },

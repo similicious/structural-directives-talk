@@ -8,7 +8,7 @@ export class UserService {
 
   getUsers() {
     return [
-      { firstName: 'Max', lastName: 'Musermann' },
+      { firstName: 'Max', lastName: 'Mustermann' },
       { firstName: 'Jane', lastName: 'Doe' },
     ];
   }
