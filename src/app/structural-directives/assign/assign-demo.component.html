@@ -1,13 +1,16 @@
 <h1 class="is-size-3">AssignDirective</h1>
 
 <article>
+  <h2 class="is-size-4">Users</h2>
+  <h2 class="is-size-4">Assigned</h2>
+
   <ng-template
     [appAssign]="users"
     [(assignedItems)]="assignedUsers"
     let-assignUsers$
     let-move="move"
   >
-    <section>
+    <section class="assign">
       <ul>
         <li *ngFor="let user of assignUsers$ | async" (click)="move(user)">
           {{ user.firstName }} {{ user.lastName }}
@@ -15,11 +18,10 @@
       </ul>
     </section>
   </ng-template>
-</article>
 
-<h2 class="is-size-4">Users</h2>
-<pre
-  >{{ users | json }}
-</pre>
-<h2 class="is-size-4">Assigned</h2>
-<pre>{{ assignedUsers | json }}</pre>
+  <pre
+    >{{ users | json }}
+    </pre
+  >
+  <pre>{{ assignedUsers | json }}</pre>
+</article>
