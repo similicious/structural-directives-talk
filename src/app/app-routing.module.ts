@@ -35,6 +35,13 @@ const routes: Routes = [
         (m) => m.AssignModule
       ),
   },
+  {
+    path: 'structural-directives/header',
+    loadChildren: () =>
+      import('./structural-directives/header/header.module').then(
+        (m) => m.HeaderModule
+      ),
+  },
 ];
 
 @NgModule({
