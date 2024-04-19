@@ -9,12 +9,12 @@ import {
 @Directive({
   selector: 'ng-template[appFor]',
 })
-export class ForDirective implements OnInit {
+export class ForDirective<TItem> implements OnInit {
   @Input('appForOf')
-  items: any[] = [];
+  items: TItem[] = [];
 
   constructor(
-    private templateRef: TemplateRef<any>,
+    private templateRef: TemplateRef<AppForContext<TItem>>,
     private viewContainerRef: ViewContainerRef
   ) {}
 
@@ -28,4 +28,17 @@ export class ForDirective implements OnInit {
       });
     });
   }
+  static ngTemplateContextGuard<TItem>(
+    directive: ForDirective<TItem>,
+    context: unknown
+  ): context is AppForContext<TItem> {
+    return true;
+  }
+}
+
+interface AppForContext<TItem> {
+  $implicit: TItem;
+  index: number;
+  first: boolean;
+  last: boolean;
 }
